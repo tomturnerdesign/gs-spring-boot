@@ -4,6 +4,7 @@ node {
    }
    stage('build') {
       sh '''
+         java -version
          cd initial
          mvn clean package
          cd target
