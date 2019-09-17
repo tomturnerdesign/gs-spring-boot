@@ -13,7 +13,10 @@ node {
       '''
    }
    stage('deploy') {
+       sh '''
+         pwd
+      '''
       azureWebAppPublish azureCredentialsId: env.AZURE_CRED_ID,
-      resourceGroup: env.RES_GROUP, appName: env.WEB_APP, filePath: "**/todo.zip"
+      resourceGroup: env.RES_GROUP, appName: env.WEB_APP, filePath: "**/springboot.zip"
    }
 }
