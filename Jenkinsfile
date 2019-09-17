@@ -3,9 +3,6 @@ node {
       checkout scm
    }
    stage('build') {
-      tools {
-       zip 'zip'
-      }
       sh '''
          cd initial
          mvn clean package
