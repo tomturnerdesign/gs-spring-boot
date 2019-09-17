@@ -1,11 +1,11 @@
-tools {
- zip 'zip'
-}
 node {
    stage('init') {
       checkout scm
    }
    stage('build') {
+      tools {
+       zip 'zip'
+      }
       sh '''
          cd initial
          mvn clean package
