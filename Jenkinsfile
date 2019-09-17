@@ -1,7 +1,7 @@
+tools {
+ zip 'zip'
+}
 node {
-   tools {
-    zip 'zip'
-   }
    stage('init') {
       checkout scm
    }
